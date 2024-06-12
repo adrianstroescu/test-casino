@@ -1,0 +1,51 @@
+
+// Global Colors
+
+$color-grey: #2E3338;
+$color-greylight: #F7F8F9;
+
+$color-blue: #0F62FE;
+$color-gold: #F0B33D; 
+$color-red: #DA1E28; 
+
+// Labels color
+$label-purplelight: #CEDDF6;
+$label-bluelight: #9BF6FF;
+$label-red: #C00008;
+
+// Main Colors
+$main-color: #1E2124;
+$secondary-color: $color-grey;
+ 
+
+// Commun sytyle
+
+body {
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+
+// ---------------- Desktop devices ----------------
+@media only screen and (min-width: 769px) {
+ 
+    
+
+  }
+
+// ---------------- Tablet devices ----------------
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+  }
+
+ // ---------------- Mobile devices ----------------
+@media only screen and (max-width: 480px) {
+    
+  }
+
+.wrapper-title {
+    .main-title {
+        font-size: 42px;
+    }
+}
+    
