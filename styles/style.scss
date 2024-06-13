@@ -1,10 +1,10 @@
 // Global Colors
 
 $color-grey: #2e3338;
-$color-greyf2: #F2F2F2;
+$color-grey21: #21272a;
+$color-greyf2: #f2f2f2;
 $color-greylight: #f7f8f9;
-$color-greymedium:#616971;
-
+$color-greymedium: #616971;
 
 $color-blue: #0f62fe;
 $color-gold: #f0b33d;
@@ -15,21 +15,22 @@ $color-white: #fff;
 $label-purplelight: #ceddf6;
 $label-bluelight: #9bf6ff;
 $label-red: #c00008;
+$label-small: #f2f4f8;
 
-//Boder-color 
-$color-border-grey:$color-greymedium;
-$color-border-blue:#2D76FF;
+//Boder-color
+$color-border-grey: $color-greymedium;
+$color-border-greylight: #dde1e6;
+$color-border-blue: #2d76ff;
 // Main Colors
 $main-color: #1e2124;
 $secondary-color: $color-grey;
 
 // Social media platform colors
-$color-youtube: #FF0000;
-$color-facebook: #4267B2;
-$color-instagram: #E1306C;
-$color-twitter: #1DA1F2;
-$color-linkedin: #0A66C2;
-
+$color-youtube: #ff0000;
+$color-facebook: #4267b2;
+$color-instagram: #e1306c;
+$color-twitter: #1da1f2;
+$color-linkedin: #0a66c2;
 
 // ---------------- Commmun ----------------
 
@@ -37,11 +38,26 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: $color-greyf2;
 }
+ 
+.wrapper-title {
+  .main-title {
+  }
+}
+.description {
+  color: $color-grey21;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+
+.big-title {
+  font-weight: 700;
+} 
 
 
-//Subscription Form Style 
+//Global Newsletter Form Style
 
-#subscriptionForm  {
+#subscriptionForm {
   .input-group-text {
     background: white;
     border: none;
@@ -54,8 +70,6 @@ body {
     border-radius: 0 4px 4px 0;
     font-size: 16px;
     font-weight: 500;
-
-    
   }
   button {
     margin-left: 15px;
@@ -65,31 +79,154 @@ body {
     font-weight: 600;
     padding: 10px 28px;
     border-radius: 4px;
-    
   }
-  ::placeholder  {
-      color: $color-greymedium;
+  ::placeholder {
+    color: $color-greymedium;
   }
 }
 
+
+.info-list {
+  ul {
+    li {
+      margin-bottom: 30px;
+      color: $color-grey21;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+    }
+  }
+}
+// Benefits 
+.benefits {
+
+  .items {
+ 
+  
+    .item {
+      border: 1px solid #DADEE2;
+      background-color: $color-white;
+      padding: 16px;
+      text-align: center;
+      border-radius: 4px;
+      img {
+        margin-bottom: 16px;
+      }
+      strong {
+        font-size: 24px;
+        line-height: 26.4px;
+        color: $main-color;
+        display: block; 
+
+      }
+      span {
+     
+        color: #40464D;
+        display: block; 
+      }
+    }
+  }
+}
+
+// Subscribe Newsletter with Banner 
+.subscribe-newsletter {
+  background-image: url(../images/bg-subscription.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 145px 0;
+  background-repeat: no-repeat;
+  .bg-newsletter {
+    background-color: $color-grey;
+    padding: 34px 32px;
+  }
+  .gift-content {
+    text-align: center;
+    .gold-text {
+      color: $color-gold;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+      margin-bottom: 8px;
+    }
+    .gift-text {
+      color: $color-white;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 26.4px;
+      margin-bottom: 8px;
+    }
+  }
+  form {
+    color: $color-white;
+    h3 {
+      font-weight: 700;
+    }
+    h6 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 19.8px;
+      margin-bottom: 16px;
+    }
+    .agree-text {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      margin-top: 16px;
+    }
+  }
+}
+
+// Payment table
 .condition-payment {
+  margin: 80px auto;
+  table {
+    border: 1px solid $color-border-greylight;
+    thead {
+      tr {
+        th {
+          background-color: #f2f4f8;
+          padding: 16px 12px;
+          color: $color-grey21;
+        }
+      }
+    }
 
+    tbody {
+      vertical-align: middle;
+      tr {
+        border-color: $color-border-greylight;
+        td {
+          font-size: 14px;
+          line-height: 15.4px;
+          color: $color-grey21;
+          font-weight: 600;
+          .small {
+            background-color: $label-small;
+            padding: 2px 10px;
+            border-radius: 10px;
+          }
+          img {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
 }
-
+// Footer 
 footer {
   background-color: $main-color;
   padding: 60px 0;
 
   .logo-subscribe {
-      border-bottom: 1px solid $color-border-grey;
-      padding-bottom: 48px;
-      margin-bottom: 48px;
+    border-bottom: 1px solid $color-border-grey;
+    padding-bottom: 48px;
+    margin-bottom: 48px;
     .logo-footer {
       font-size: 24px;
       font-weight: 900;
       color: $color-white;
     }
-
   }
 
   .item {
@@ -105,7 +242,6 @@ footer {
 
       &:hover {
         text-decoration: underline;
-      
       }
     }
     .title {
@@ -131,7 +267,6 @@ footer {
             }
             &.fa-facebook-f {
               color: $color-facebook;
-
             }
             &.fa-twitter {
               color: $color-twitter;
@@ -143,16 +278,61 @@ footer {
               color: $color-linkedin;
             }
           }
-         
         }
       }
     }
-
   }
 }
 
 // ---------------- Desktop devices ----------------
 @media only screen and (min-width: 769px) {
+
+  .toggle-btn {
+    display: none;
+ 
+  }
+
+  .big-title {
+    font-size: 42px;
+    line-height: 46.2px;
+    margin-bottom: 32px;
+  } 
+  .info-list {
+    .description {
+      padding-left: 10px; 
+    }
+  }
+
+  .benefits {
+    margin: 80px auto 32px auto;
+    .description {
+      margin-bottom: 48px;
+    }
+    .col-6 {
+      padding: 8px;
+    }
+    .big-title {
+      margin-bottom: 48px;
+    }
+    .items {
+      .item {
+        span {
+          font-size: 16px;
+          line-height: 22.4px;
+      
+        }
+      }
+    }
+  }
+
+  .subscribe-newsletter {
+    form {
+      h3 {
+        font-size: 32px;
+        line-height: 35.2px;
+      }
+    }
+  }
 }
 
 // ---------------- Tablet devices ----------------
@@ -161,10 +341,74 @@ footer {
 
 // ---------------- Mobile devices ----------------
 @media only screen and (max-width: 480px) {
-}
 
-.wrapper-title {
-  .main-title {
-    font-size: 42px;
+  .toggle-btn {
+    background: transparent;
+ 
+    margin-bottom: 20px;
+    border: none;
+    color: $color-greymedium;
+    font-size: 14px;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    text-transform: lowercase;
+    width: 100%;
+  }
+
+  .read-more {
+    overflow: hidden;
+    height: 49px;
+    transition: height 0.3s ease;
+    margin-bottom: 10px;
+  }
+  .benefits {
+    padding: 48px 0;
+    background-color: $color-white;
+    border-top: 1px solid  $color-border-greylight;
+    .col-6 {
+      padding: 4px;
+    }
+  
+    .items {
+      .item {
+        span {
+          font-size: 14px;
+          line-height: 19.6px;
+      
+        }
+      }
+    }
+  }
+ 
+  .big-title {
+    font-size: 24px;
+    line-height: 26.4px;
+    margin-bottom: 24px;
+  }
+
+
+  .subscribe-newsletter {
+    background-image: url("../images/mobile-bg-subsciption.png");
+    background-size: cover;
+    background-position: center;
+    .gift-content {
+      margin: 0 auto 16px auto;
+    }
+    form {
+      h3 {
+        font-size: 24px;
+        line-height: 26.4px;
+      }
+    }
+  }
+
+  .footer-content {
+    .items {
+      text-align: center;
+      .item:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
   }
 }

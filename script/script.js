@@ -65,3 +65,31 @@ function populateTable() {
   
   
   populateTable();
+
+
+
+// READ MORE DESCRIPTIONS 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const descriptions = document.querySelectorAll('.read-more');
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+  function toggleText(index) {
+    const description = descriptions[index];
+    const button = toggleButtons[index];
+    const isCollapsed = description.style.height === '49px' || description.style.height === '';
+
+    description.style.height = isCollapsed ? 'auto' : '49px';
+    button.innerHTML = isCollapsed ? 'Read Less <i class="fas fa-chevron-up"></i>' : 'Read More <i class="fas fa-chevron-down"></i>';
+  }
+
+  function isMobileDevice() {
+    return window.innerWidth <= 768;
+  }
+
+  if (isMobileDevice()) {
+    toggleButtons.forEach((button, index) => {
+      button.addEventListener('click', () => toggleText(index));
+    });
+  }
+});
