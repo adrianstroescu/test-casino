@@ -1,6 +1,4 @@
-@import 'colors';
-
-
+@import "colors";
 
 // ---------------- Commmun ----------------
 
@@ -8,7 +6,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: $color-greyf2;
 }
- 
+
 .description {
   color: $color-grey21;
   font-size: 16px;
@@ -18,8 +16,13 @@ body {
 
 .big-title {
   font-weight: 700;
-} 
+}
 
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+}
 
 //Global Newsletter Form Style
 
@@ -51,6 +54,35 @@ body {
   }
 }
 
+// Header
+.header-content {
+  .action-links {
+    a {
+      text-decoration: none;
+    }
+    .links {
+      margin-right: 16px;
+      &.wishlist {
+        position: relative;
+        img {
+          margin-right: 14px;
+        }
+        .qty {
+          background-color: $label-red;
+          border-radius: 50%;
+          font-size: 12px;
+          color: $color-white;
+          position: absolute;
+          left: 23px;
+          width: 18px;
+          height: 18px;
+          line-height: 17px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
 .info-list {
   ul {
@@ -63,14 +95,11 @@ body {
     }
   }
 }
-// Benefits 
+// Benefits
 .benefits {
-
   .items {
- 
-  
     .item {
-      border: 1px solid #DADEE2;
+      border: 1px solid #dadee2;
       background-color: $color-white;
       padding: 16px;
       text-align: center;
@@ -82,19 +111,17 @@ body {
         font-size: 24px;
         line-height: 26.4px;
         color: $main-color;
-        display: block; 
-
+        display: block;
       }
       span {
-     
-        color: #40464D;
-        display: block; 
+        color: #40464d;
+        display: block;
       }
     }
   }
 }
 
-// Subscribe Newsletter with Banner 
+// Subscribe Newsletter with Banner
 .subscribe-newsletter {
   background-image: url(../images/bg-subscription.jpg);
   background-size: cover;
@@ -179,7 +206,7 @@ body {
     }
   }
 }
-// Footer 
+// Footer
 footer {
   background-color: $main-color;
   padding: 60px 0;
@@ -252,20 +279,86 @@ footer {
 
 // ---------------- Desktop devices ----------------
 @media only screen and (min-width: 769px) {
+  .header-content {
+    padding: 8px 20px;
+    background-color: $main-color;
+    .logo-content {
+      margin-right: 32px;
+    }
+    .block-search {
+      border-radius: 4px;
+      position: relative;
+      img {
+        position: absolute;
+        left: 20px;
+        top: 13px;
+      }
+      ::placeholder {
+        color: #c8ced4;
+      }
+      .search {
+        background: #40464d;
+        border: 1px solid #616971;
+        height: 44px;
+        border: none;
+        padding: 0px 50px;
+        color: #c8ced4;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+      }
+    }
 
+    .action-links {
+      margin-left: auto;
+      a {
+        padding: 8px;
+        color: $color-white;
+        img {
+          margin-right: 5px;
+        }
+      }
+      .links {
+        margin-right: 16px;
+      }
+    }
+
+    .authorization-link {
+      a {
+        padding: 8px 28px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid;
+        border-radius: 4px;
+        text-decoration: none;
+        &.login {
+          color: $color-white;
+          margin-right: 16px;
+        }
+        &.sign-up {
+          border-color: $color-gold;
+          color: $color-grey;
+          background: linear-gradient(180deg, #fac93a 0%, #f0b33d 100%);
+        }
+      }
+    }
+  }
+
+  .logo {
+    color: #fff;
+  }
   .toggle-btn {
     display: none;
- 
   }
 
   .big-title {
     font-size: 42px;
     line-height: 46.2px;
     margin-bottom: 32px;
-  } 
+  }
   .info-list {
     .description {
-      padding-left: 10px; 
+      padding-left: 10px;
     }
   }
 
@@ -285,7 +378,6 @@ footer {
         span {
           font-size: 16px;
           line-height: 22.4px;
-      
         }
       }
     }
@@ -306,11 +398,77 @@ footer {
 }
 
 // ---------------- Mobile devices ----------------
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
+  .logo {
+    color: $color-grey22;
+  }
+
+  // Header
+  .header-content {
+    padding: 9px 20px;
+    background-color: $color-white;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 35px;
+      cursor: pointer;
+      span {
+        background: #000000;
+        border-radius: 10px;
+        height: 4px;
+        margin: 3px 0;
+        transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        &:nth-of-type(1) {
+          width: 50%;
+        }
+        &:nth-of-type(2) {
+          width: 75%;
+        }
+        &:nth-of-type(3) {
+          width: 100%;
+        }
+      }
+      input[type="checkbox"] {
+        display: none;
+        &:checked ~ span:nth-of-type(1) {
+          transform-origin: bottom;
+          transform: rotatez(45deg) translate(6px, 3px);
+        }
+        &:checked ~ span:nth-of-type(2) {
+          transform-origin: top;
+          transform: rotatez(-45deg);
+        }
+        &:checked ~ span:nth-of-type(3) {
+          transform-origin: bottom;
+          width: 50%;
+          transform: translate(7px, -9px) rotatez(45deg);
+        }
+      }
+    }
+
+    .action-links {
+      a {
+        color: $main-color;
+        img {
+          filter: invert(100%) sepia(4%) saturate(1847%) hue-rotate(169deg)
+            brightness(91%) contrast(90%);
+        }
+      }
+      .calendar,
+      .store-language {
+        display: none;
+      }
+    }
+
+    .authorization-link {
+      display: none;
+    }
+  }
 
   .toggle-btn {
     background: transparent;
- 
+
     margin-bottom: 20px;
     border: none;
     color: $color-greymedium;
@@ -331,29 +489,26 @@ footer {
   .benefits {
     padding: 48px 0;
     background-color: $color-white;
-    border-top: 1px solid  $color-border-greylight;
+    border-top: 1px solid $color-border-greylight;
     .col-6 {
       padding: 4px;
     }
-  
+
     .items {
       .item {
         span {
           font-size: 14px;
           line-height: 19.6px;
-      
         }
       }
     }
   }
- 
-  .big-title {
 
+  .big-title {
     font-size: 24px;
     line-height: 26.4px;
     margin-bottom: 24px;
   }
-
 
   .subscribe-newsletter {
     background-image: url("../images/mobile-bg-subsciption.png");
