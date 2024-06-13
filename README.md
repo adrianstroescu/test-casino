@@ -17,7 +17,7 @@
 
 1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone git@github.com:adrianstroescu/test-casino.git
 2. Open the project folder in your preferred code editor.
 
 3. Run the HTML file in a web browser to view the web page
