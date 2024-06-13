@@ -396,9 +396,17 @@ footer {
   }
 }
 
-// ---------------- Tablet devices ----------------
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+// ---------------- Small Monitor devices ----------------
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .header-content  {
+    .action-links  {
+      a {
+        font-size: 0;
+      }
+    }
+  }
 }
+
 
 // ---------------- Mobile devices ----------------
 @media only screen and (max-width: 767px) {

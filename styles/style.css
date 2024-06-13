@@ -181,7 +181,7 @@ footer {
     footer .item .social-links a:not(:last-child) {
       margin-right: 16px; }
     footer .item .social-links a i {
-      font-size: 24px;
+      font-size: 19px;
       transition: all 0.3s ease; }
       footer .item .social-links a i:hover.fa-youtube {
         color: #ff0000; }
@@ -268,6 +268,10 @@ footer {
   .subscribe-newsletter form h3 {
     font-size: 32px;
     line-height: 35.2px; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .header-content .action-links a {
+    font-size: 0; } }
 
 @media only screen and (max-width: 767px) {
   .logo {
