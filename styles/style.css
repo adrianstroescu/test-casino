@@ -198,6 +198,8 @@ footer {
   .header-content {
     padding: 8px 20px;
     background-color: #1e2124; }
+    .header-content label {
+      display: none; }
     .header-content .logo-content {
       margin-right: 32px; }
     .header-content .block-search {

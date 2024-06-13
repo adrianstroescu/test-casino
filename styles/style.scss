@@ -282,6 +282,9 @@ footer {
   .header-content {
     padding: 8px 20px;
     background-color: $main-color;
+    label {
+      display: none;
+    }
     .logo-content {
       margin-right: 32px;
     }
