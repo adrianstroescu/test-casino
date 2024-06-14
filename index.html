@@ -27,24 +27,22 @@
         <div class="header-content">
            
             <div class="d-flex align-items-center">
-              <label for="check">
-                <input type="checkbox" id="check"/> 
-                <span></span>
-                <span></span>
-                <span></span>
-              </label> 
+              <div class="menu-mobile" id="click-menu">
+                <img src="images/menu-scale.png" alt="Menu Icon">
+              </div>
+           
               
               <div class="logo-content">
                 <a class="logo" href="#">LOGO</a>
               </div>
 
-              <div class="block-search col-md-3">  
-                <img src="images/search-icon.png" alt="Search">
+              <div class="block-search col-md-4">  
+                <img src="images/search-icon.png" alt="Search" id="search-icon">
             
-                <input type="search" class="search"  placeholder="Search for a game, casino or bonus...">
+                <input type="search" id="search-input" class="search"  placeholder="Search for a game, casino or bonus...">
            
               </div>
-              <div class="action-links d-flex">
+              <div class="action-links hover-links d-flex">
 
                 <div class="links wishlist">
                   <a href="#"><img src="images/wishlist.png" alt="wishlist">New</a>
@@ -68,14 +66,66 @@
      
           </div>
       </div>
-      <nav>
+      <nav class="navbar">
+     
+         
+            <ul class="navbar-items">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Free Slots</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Table Games</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tournaments <span class="label-small">NEW</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bonuses <i class="fas fa-chevron-down"></i></a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Casinos <i class="fas fa-chevron-down"></i></a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lotto</i></a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
 
-      </nav>
-       
+            </ul>
+            <div class="action-links d-flex">
+
+              <div class="links subscribe">
+                <a href="#sub-newsletter"><i class="far fa-envelope"></i> Subscribe</a>
+              </div>
+              <div class="links favorite">
+                <a href="#"><i class="far fa-heart"></i> Favorites</a>
+              </div>
+
+            </div>
+
     </header>
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="items"> 
+          <li class="item home"> 
+            <a href="/home" title="Home">  <img src="images/home-icon.png" alt="Home Icon">  Home</a> 
+          </li>  
+          <li class="item"> 
+            <strong>Compare</strong> 
+          </li> 
+        </ul>
+      </div>
+     
+    </div>
+
     <main id="content" class="main-content">
 
- 
+
         <div class="container wrapper-title">
             <div class="row">
             
@@ -84,10 +134,304 @@
                   Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc,
                   ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. 
                   Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus iaculis.</p>
-           
+                  <div class="action-primary only-mobile">
+                    <a href="#" class="action primary add"><i class="fas fa-plus"></i>Add Casino</a>
+                 </div>
             </div>
         
         </div>
+
+        <section class="add-compare">
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-6 col-8 add-card d-none d-md-block d-sm-block ">
+                 <div class="card-top">
+                  <div class="title">
+                    Rhoncus morbi et augue nec, in id ullamcorper at sit. 
+                  </div>
+                  <p class="description">Rhoncus morbi et augue nec, in id ullamcorper at sit. 
+                    Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, 
+                    ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. </p>
+                    <div class="action-primary">
+                      <a href="#" class="action primary add"><i class="fas fa-plus"></i>Add Casino</a>
+                   </div>
+
+                 </div>
+
+                 <table class="table">
+                  <tr>
+                      <th>Min Deposit</th>
+                      
+                  </tr>
+                  <tr>
+                      <th>Game Type</th>
+                      
+                  </tr>
+                  <tr>
+                      <th>Licences</th>
+                     
+                  </tr>
+                  <tr>
+                      <th>Founded</th>
+                      
+                  </tr>
+                  <tr>
+                      <th>Number of Games</th>
+                      
+                  </tr>
+                  <tr>
+                      <th>Game Providers</th>
+                      
+                  </tr>
+                  <tr>
+                      <th>Deposit Methods</th>
+                      
+                  </tr>
+                
+              </table>
+ 
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-6 col-8 casino-card">
+                <div class="card-top active">
+                  <div class="remove"><button>Remove <i class="fas fa-times"></i></button></div>
+                  <div class="banner">
+                    <img src="images/casino1.png" alt="Spin Casino">
+                  </div>
+                 
+                  <div class="labels">
+                    <img src="images/country-restriction-x.png" alt="Flag label"> 
+                    <span class="label-new">New</span>
+                    <span class="label-exclusive">Exclusive</span>
+                  </div>
+                  <div class="title">
+                    Pink Casino
+                  </div>
+                  <div class="rating d-flex">
+                    <div class="stars">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-number">
+                      4.6 
+                    </div>
+                    
+                  </div>
+
+                  <div class="info-regulations">
+                    <span><span class="base">Regulated</span> UKGC, MGA, GRA</span>
+                  </div>
+                  <div class="bottom-add-more">
+                      <div class="semi-title">
+                        100% Bonus Up To £50 + 50 Free Spins on BOOK OF DEAD at  Pink Casino
+                      </div>
+                      <div class="action-primary double">
+                        <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                        <a href="#" class="action primary info">More Info <i class="fas fa-plus"></i></a>
+                     </div>
+                  </div>
+
+
+                </div>
+
+                <table class="table">
+                  <tr>
+                      <th class="only-mobile">Min Deposit</th>
+                      <td>£10 <span class="label-recommended">Recommended</span></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Game Type</th>
+                      <td>Slots, Scratchcards, Mobile Games... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Licences</th>
+                      <td>UKGC, MGA</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Founded</th>
+                      <td>2020</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Number of Games</th>
+                      <td>1750</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Game Providers</th>
+                      <td>Netent, Microgaming, Evolution... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile">Deposit Methods</th>
+                      <td>Trustly, Paysafecard, Skrill Money... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <div class="action-primary">
+                          <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                        </div>
+                    </td>
+                  </tr>
+              </table>
+        
+
+
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-6 col-8 casino-card  ">
+                <div class="card-top ">
+                  <div class="remove"><button>Remove <i class="fas fa-times"></i></button></div>
+                  <div class="banner">
+                    <img src="images/casino2.png" alt="Gold Casino">
+                  </div>
+                 
+                  <div class="labels">
+                    <img src="images/country-restriction-x.png" alt="Flag label"> 
+                    <span class="label-new">New</span>
+                    <span class="label-exclusive">Exclusive</span>
+                  </div>
+                  <div class="title">
+                    Casushi Casino
+                  </div>
+                  <div class="rating d-flex">
+                    <div class="stars">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-number">
+                      4.6 
+                    </div>
+                    
+                  </div>
+
+                  <div class="info-regulations">
+                    <span><span class="base">Regulated</span> UKGC, MGA, GRA</span>
+                  </div>
+                  <div class="bottom-add-more">
+                      <div class="semi-title">
+                        100% Bonus Up To £50 + 50 Free Spins on BOOK OF DEAD at  Pink Casino
+                      </div>
+                      <div class="action-primary double">
+                        <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                        <a href="#" class="action primary info">More Info <i class="fas fa-plus"></i></a>
+                     </div>
+                  </div>
+
+
+                </div>
+                <table class="table">
+                  <tr>
+                      <th class="only-mobile" >Min Deposit</th>
+                      <td>£20</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Game Type</th>
+                      <td>Slots, Scratchcards, Mobile Games... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Licences</th>
+                      <td>UKGC, MGA</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Founded</th>
+                      <td>2023</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Number of Games</th>
+                      <td>950</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Game Providers</th>
+                      <td>Netent, Microgaming, Evolution... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th  class="only-mobile"  >Deposit Methods</th>
+                      <td>Trustly, Paysafecard, Skrill Money... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                    <td >
+                      <div class="action-primary">
+                        <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                      </div>
+                  </td>
+                  </tr>
+              </table>
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-6 col-8 casino-card ">
+                <div class="card-top">
+                  <div class="remove"><button>Remove <i class="fas fa-times"></i></button></div>
+                  <div class="banner">
+                    <img src="images/casino3.png" alt="Ice Casino">
+                  </div>
+                 
+                  <div class="labels">
+                    <img src="images/country-restriction-x.png" alt="Flag label"> 
+                    <span class="label-new">New</span>
+                    <span class="label-exclusive">Exclusive</span>
+                  </div>
+                  <div class="title">
+                    Playsunny Casino
+                  </div>
+                  <div class="rating d-flex">
+                    <div class="stars">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <div class="rating-number">
+                      4.6 
+                    </div>
+                    
+                  </div>
+
+                  <div class="info-regulations">
+                    <span><span class="base">Regulated</span> UKGC, MGA, GRA</span>
+                  </div>
+                  <div class="bottom-add-more">
+                      <div class="semi-title">
+                        100% Bonus Up To £50 + 50 Free Spins on BOOK OF DEAD at  Pink Casino
+                      </div>
+                      <div class="action-primary double">
+                        <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                        <a href="#" class="action primary info">More Info <i class="fas fa-plus"></i></a>
+                     </div>
+                  </div>
+
+
+                </div>
+                <table class="table">
+                  <tr>
+                      <th class="only-mobile" >Min Deposit</th>
+                      <td>£15</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Game Type</th>
+                      <td>Slots, Scratchcards, Mobile Games... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Licences</th>
+                      <td>UKGC, MGA, GRA</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Founded</th>
+                      <td>2023</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Number of Games</th>
+                      <td>1140</td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Game Providers</th>
+                      <td>Netent, Microgaming, Evolution... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                      <th class="only-mobile" >Deposit Methods</th>
+                      <td>Trustly, Paysafecard, Skrill Money... <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="action-primary">
+                        <a href="#" class="action primary more">Visit Casino <img src="images/external-link.png" alt="External link icon"> </a>
+                      </div>
+                  </td>
+                  </tr>
+              </table>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section class="info-list">
           <div class="container">
@@ -175,7 +519,7 @@
         </section>
 
 
-        <section class="subscribe-newsletter">
+        <section class="subscribe-newsletter" id="sub-newsletter">
 
           <div class="container">
             <div class="row">
@@ -314,7 +658,47 @@
                 </div>
           </div>
       </div>
+
+      <div class="mobile-floating-menu only-mobile">
+        <div class="container">
+          <div class="row justify-content-between m-0">
+              <div class="col-2 icon-col">
+                  <a href="#">
+                    <img src="images/mobile-dice.png" alt="dice">
+                      <span>Free Slots</span>
+                  </a>
+              </div>
+              <div class="col-2 icon-col">
+                  <a href="#">
+                    <img src="images/mobile-gift.png" alt="mobile-gift">
+                      <span>Bonuses</span>
+                  </a>
+              </div>
+              <div class="col-2 icon-col">
+                  <a href="#">
+                    <img src="images/mobile-diamond.png" alt="mobile-diamond">
+                      <span>Casinos</span>
+                  </a>
+              </div>
+              <div class="col-2 icon-col">
+                  <a href="#">
+                    <img src="images/mobile-calendar.png" alt="mobile-calendar">
+                      <span>Calendar</span>
+                  </a>
+              </div>
+              <div class="col-2 icon-col">
+                  <a href="#">
+                    <img src="images/mobile-user-circle-alt.png" alt="mobile-user-circle">
+                      <span>Login</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+      </div>
+
     </footer>
+
+
 </body>
 </html>
 
