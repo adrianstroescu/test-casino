@@ -518,8 +518,16 @@ footer {
     line-height: 35.2px; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
+  header .action-links.hover-links a:hover {
+    padding: 22px 0px 22px 8px; }
   .header-content .action-links a {
-    font-size: 0; } }
+    font-size: 0; }
+  .navbar .navbar-items .nav-item:not(:last-child) {
+    margin-right: 0px; }
+  .navbar .action-links a {
+    font-size: 0; }
+    .navbar .action-links a i {
+      font-size: 16px; } }
 
 @media only screen and (max-width: 767px) {
   body {
@@ -539,7 +547,7 @@ footer {
     .mobile-floating-menu .icon-col {
       padding: 0; }
     .mobile-floating-menu a {
-      color: #40464D;
+      color: #40464d;
       display: block;
       text-decoration: none;
       text-align: center; }
@@ -553,6 +561,8 @@ footer {
   .add-compare .row {
     flex-wrap: nowrap;
     overflow-y: scroll; }
+  .add-compare .add-card {
+    display: none !important; }
   .add-compare .casino-card table tbody tr {
     display: flex;
     flex-direction: column; }
@@ -569,7 +579,7 @@ footer {
     background-color: #fff;
     border-radius: 4px;
     margin-bottom: 8px;
-    border: 1px solid #DADEE2;
+    border: 1px solid #dadee2;
     border-radius: 4px; }
   .open-search header:after {
     content: "";
@@ -579,7 +589,8 @@ footer {
     width: 100%;
     left: 0;
     right: 0;
-    top: 56px; }
+    top: 56px;
+    z-index: 1; }
   .open-search .block-search #search-input {
     display: block; }
   .navbar {
@@ -622,7 +633,8 @@ footer {
     width: 100%;
     left: 0;
     right: 0;
-    top: 56px; }
+    top: 56px;
+    z-index: 1; }
   .breadcrumbs .items {
     padding: 8px 0; }
   .block-search {
@@ -644,6 +656,9 @@ footer {
       border: none;
       padding: 0px 15px;
       box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.16); }
+  .info-list {
+    background: #dde1e6;
+    padding: 48px 0; }
   .breadcrumbs {
     background-color: #2e3338; }
     .breadcrumbs .items .item img {
@@ -670,35 +685,6 @@ footer {
       .header-content .action-links .links.wishlist .qty {
         left: 15px;
         top: -4px; }
-    .header-content label {
-      display: flex;
-      flex-direction: column;
-      width: 35px;
-      cursor: pointer; }
-      .header-content label span {
-        background: #000000;
-        border-radius: 10px;
-        height: 4px;
-        margin: 3px 0;
-        transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
-        .header-content label span:nth-of-type(1) {
-          width: 50%; }
-        .header-content label span:nth-of-type(2) {
-          width: 75%; }
-        .header-content label span:nth-of-type(3) {
-          width: 100%; }
-      .header-content label input[type="checkbox"] {
-        display: none; }
-        .header-content label input[type="checkbox"]:checked ~ span:nth-of-type(1) {
-          transform-origin: bottom;
-          transform: rotatez(45deg) translate(6px, 3px); }
-        .header-content label input[type="checkbox"]:checked ~ span:nth-of-type(2) {
-          transform-origin: top;
-          transform: rotatez(-45deg); }
-        .header-content label input[type="checkbox"]:checked ~ span:nth-of-type(3) {
-          transform-origin: bottom;
-          width: 50%;
-          transform: translate(7px, -9px) rotatez(45deg); }
     .header-content .action-links a {
       color: #1e2124; }
       .header-content .action-links a img {
