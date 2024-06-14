@@ -54,6 +54,9 @@ body {
   letter-spacing: 0.5px;
   text-decoration: none;
   display: inline-block;
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  }
   &.add {
     border: 2px solid $color-border-blue;
     background-color: $color-blue;
