@@ -1,18 +1,19 @@
 
 // Validation subscribe email
 
-window.addEventListener('load', function () {
-    var forms = document.getElementsByClassName('needs-validation');
-    var validation = Array.prototype.filter.call(forms, function (form) {
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
+window.addEventListener('load', function() {
+  const forms = document.getElementsByClassName('needs-validation');
+  Array.from(forms).forEach(function(form) {
+      form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+      }, false);
+  });
 }, false);
+
 
 // Tabel  Data   
 const tableData = [
@@ -49,6 +50,7 @@ const tableData = [
   ];
 
   // Function to populate the table with data
+  
 function populateTable() {
     const tableBody = document.getElementById('payment-table').getElementsByTagName('tbody')[0];
     tableData.forEach((rowData) => {
@@ -75,23 +77,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleButtons = document.querySelectorAll('.toggle-btn');
 
   function toggleText(index) {
-    const description = descriptions[index];
-    const button = toggleButtons[index];
-    const isCollapsed = description.style.height === '49px' || description.style.height === '';
+      const description = descriptions[index];
+      const button = toggleButtons[index];
+      const isCollapsed = description.style.height === '49px' || description.style.height === '';
 
-    description.style.height = isCollapsed ? 'auto' : '49px';
-    button.innerHTML = isCollapsed ? 'Read Less <i class="fas fa-chevron-up"></i>' : 'Read More <i class="fas fa-chevron-down"></i>';
+      description.style.height = isCollapsed ? 'auto' : '49px';
+      button.innerHTML = isCollapsed ? 'Read Less <i class="fas fa-chevron-up"></i>' : 'Read More <i class="fas fa-chevron-down"></i>';
   }
 
-  function isMobileDevice() {
-    return window.innerWidth <= 768;
-  }
-
-  if (isMobileDevice()) {
-    toggleButtons.forEach((button, index) => {
+  toggleButtons.forEach((button, index) => {
       button.addEventListener('click', () => toggleText(index));
-    });
-  }
+  });
 });
 
 
@@ -99,36 +95,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
-
-  // Mobile Open Search
   const searchIcon = document.getElementById('search-icon');
   const searchInput = document.getElementById('search-input');
-  
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    searchIcon.addEventListener('click', () => {
-      body.classList.toggle('open-search');
-      searchInput.focus();
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.block-search')) {
-        body.classList.remove('open-search');
-        searchInput.blur();
-      }
-    });
-  }
-
-  // Mobile Open Menu
   const navbarToggle = document.getElementById('click-menu');
   const navbar = document.querySelector('.navbar');
 
-  navbarToggle.addEventListener('click', () => {
-    body.classList.toggle('open-menu');
+  searchIcon.addEventListener('click', () => {
+      body.classList.toggle('open-search');
+      searchInput.focus();
   });
 
   document.addEventListener('click', (event) => {
-    if (!navbar.contains(event.target) && !navbarToggle.contains(event.target)) {
-      body.classList.remove('open-menu');
-    }
+      if (!event.target.closest('.block-search')) {
+          body.classList.remove('open-search');
+          searchInput.blur();
+      }
+  });
+
+  navbarToggle.addEventListener('click', () => {
+      body.classList.toggle('open-menu');
+  });
+
+  document.addEventListener('click', (event) => {
+      if (!navbar.contains(event.target) && !navbarToggle.contains(event.target)) {
+          body.classList.remove('open-menu');
+      }
   });
 });
+
